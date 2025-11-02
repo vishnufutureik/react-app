@@ -6,7 +6,7 @@ export default function UsersList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users")
+      .get(`${import.meta.env.VITE_SERVER_BASE_URL}/api/users`)
       .then((res) => {
         console.log("✅ Users:", res.data);
         setUsers(res.data);
